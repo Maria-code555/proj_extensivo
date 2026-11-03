@@ -1,0 +1,350 @@
+/* ========================================
+   IDENTIDADE VISUAL - JANINE COSMÉTICOS
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+
+    /* FONTES */
+    --font-principal: 'Inter', sans-serif;
+    --font-destaque: 'DM Sans', sans-serif;
+
+    /* CORES PRINCIPAIS */
+    --marrom: #593D32;
+    --marrom-escuro: #382820;
+
+    --bege: #F7F1E8;
+    --bege-medio: #EDE0D0;
+
+    --coral: #E98576;
+    --coral-escuro: #C96659;
+
+    --branco: #FFFFFF;
+    --off-white: #FDFBF8;
+
+    /* TEXTOS E BORDAS */
+    --texto-principal: #302722;
+    --texto-secundario: #776B64;
+    --texto-preco-antigo: #9A9089;
+
+    --borda: #E5D9CE;
+
+    /* PAINEL ADMINISTRATIVO */
+    --fundo-admin: #F6F4F1;
+
+    /* CORES SEMÂNTICAS */
+    --sucesso: #34764B;
+    --sucesso-claro: #E3F1E7;
+
+    --atencao: #A96D16;
+    --atencao-claro: #FFF0D5;
+
+    --erro: #B83D3D;
+    --erro-claro: #F8E1E1;
+
+    --informacao: #68598C;
+    --informacao-claro: #EDE7F5;
+
+    --alerta-claro: #FFF6E5;
+    --info-claro: #F2F5F5;
+
+    /* PESOS DAS FONTES */
+    --peso-normal: 400;
+    --peso-medio: 500;
+    --peso-semibold: 600;
+    --peso-bold: 700;
+
+    /* TÍTULOS */
+    --titulo-banner: clamp(48px, 5.4vw, 76px);
+    --titulo-editorial: 43px;
+    --titulo-pagina: 42px;
+    --titulo-produto: 40px;
+    --titulo-secao: 32px;
+    --titulo-checkout: 29px;
+    --titulo-admin: 28px;
+
+    /* TEXTOS */
+    --texto-banner: 16px;
+    --texto-editorial: 13px;
+    --texto-produto: 13px;
+    --texto-descricao: 12px;
+    --texto-botao: 12px;
+    --texto-navegacao: 11px;
+    --texto-auxiliar: 9px;
+
+    /* ELEMENTOS ESPECÍFICOS */
+    --logo: 21px;
+    --preco-card: 16px;
+    --preco-detalhe: 28px;
+    --total-carrinho: 21px;
+    --metrica-dashboard: 23px;
+    --titulo-modal: 23px;
+
+    /* BORDAS */
+    --raio-pequeno: 4px;
+    --raio-medio: 8px;
+    --raio-grande: 12px;
+    --raio-arredondado: 50px;
+
+    /* SOMBRAS */
+    --sombra-suave: 0 2px 10px rgba(56, 40, 32, 0.06);
+    --sombra-media: 0 4px 16px rgba(56, 40, 32, 0.10);
+
+    /* TRANSIÇÕES */
+    --transicao: all 0.3s ease;
+}
+
+/* ========================================
+   PADRÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    font-weight: var(--peso-normal);
+    color: var(--texto-principal);
+    background-color: var(--off-white);
+}
+
+h1, h2, .logo {
+    font-family: var(--font-destaque);
+}
+
+h1 {
+    font-weight: var(--peso-bold);
+}
+
+h2 {
+    font-weight: var(--peso-semibold);
+}
+
+button {
+    font-family: var(--font-principal);
+    font-size: var(--texto-botao);
+    font-weight: var(--peso-semibold);
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.figure_login {
+    font-family: var(--font-principal);
+    width: 600px;
+    height: 800px;
+    background-color: var(--coral-escuro);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.figure_login img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Filtro escuro */
+.figure_login::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.texto_imagem {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-around;
+    z-index: 1;
+    bottom: 400px;
+    left: 40px;
+    color: var(--branco);
+}
+
+.texto_imagem h1 {
+    font-family: var(--font-destaque);
+    font-size: 55px;
+}
+
+.texto_imagem p {
+    color: #f8b3aa;
+    font-family: var(--font-principal);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+main > section{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: #5a5958; */
+}
+
+.login_container {
+    width: 100%;
+    max-width: 460px;
+    margin: 35px auto;
+    padding: 0 10px;
+}
+
+/* TEXTOS DO CABEÇALHO */
+
+.form_text h3 {
+    font-family: var(--font-principal);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--coral-escuro);
+    margin-bottom: 25px;
+}
+
+.form_text h1 {
+    font-family: var(--font-destaque);
+    font-size: 34px;
+    font-weight: 500;
+    color: var(--texto-principal);
+    margin-bottom: 12px;
+}
+
+.form_text p {
+    font-size: 11px;
+    color: var(--texto-secundario);
+    margin-bottom: 32px;
+}
+
+/* FORMULÁRIO */
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form_div label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--texto-principal);
+}
+
+.form_div input {
+    width: 100%;
+    height: 42px;
+    padding: 0 13px;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    outline: none;
+    background-color: var(--branco);
+    font-family: var(--font-principal);
+    font-size: 10px;
+    color: var(--texto-principal);
+    transition: var(--transicao);
+}
+
+.form_div input:focus {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 2px rgba(233, 133, 118, 0.12);
+}
+
+.form_div input::placeholder {
+    color: var(--texto-preco-antigo);
+}
+
+.form_div small {
+    font-size: 8px;
+    color: var(--texto-secundario);
+}
+
+/* SENHA */
+
+.senha_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.senha_header a {
+    font-size: 9px;
+    color: var(--coral-escuro);
+    text-decoration: none;
+}
+
+.senha_header a:hover {
+    text-decoration: underline;
+}
+
+/* BOTÃO */
+
+.form_login input[type="submit"] {
+    width: 100%;
+    height: 43px;
+    border: none;
+    border-radius: 9px;
+    background-color: var(--coral);
+    color: var(--marrom-escuro);
+    font-family: var(--font-principal);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.form_login input[type="submit"]:hover {
+    background-color: var(--coral-escuro);
+    color: var(--branco);
+}
+
+/* CADASTRO */
+
+.cadastro {
+    text-align: center;
+    margin-top: 3px;
+}
+
+.cadastro p {
+    font-size: 10px;
+    color: var(--texto-secundario);
+}
+
+.cadastro a {
+    color: var(--coral-escuro);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 3px;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+/* MENSAGEM PHP */
+
+.mensagem {
+    font-size: 10px;
+    color: var(--erro);
+    text-align: center;
+}
+
+
