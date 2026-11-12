@@ -1,0 +1,330 @@
+
+/* Configurações gerais da página */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #292321;
+    background-color: #fdfbf9;
+}
+
+/* HEADER E FOOTER */
+
+header,
+footer {
+    padding: 12px;
+    text-align: center;
+    background-color: #fdfbf9;
+    color: #292321;
+    font-size: 12px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* IMAGEM LATERAL */
+
+.figure_cadastro {
+    position: relative;
+    flex: 0 0 40%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #ad9583;
+}
+
+/* Imagem preenchendo toda a lateral */
+
+.figure_cadastro img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Camada escura sobre a imagem */
+
+.figure_cadastro::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(76, 48, 35, 0.40),
+        rgba(76, 48, 35, 0.65)
+    );
+
+    z-index: 1;
+}
+
+/* Texto sobre a imagem */
+
+.texto_imagem {
+    position: absolute;
+    left: 45px;
+    right: 35px;
+    bottom: 15%;
+
+    color: white;
+    z-index: 2;
+}
+
+.texto_imagem p:first-child {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.texto_imagem h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: normal;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.texto_imagem p:last-child {
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 330px;
+}
+
+/* ÁREA DO CADASTRO */
+
+.pagina-cadastro {
+    display: flex;
+    width: 60%;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 30px;
+}
+
+/* LADO DIREITO */
+
+.lado-direito {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 550px;
+    padding: 10px 0;
+}
+
+/* TÍTULOS */
+
+.subtitulo {
+    color: #e98274;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.formulario h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #827873;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* CAMPOS DO FORMULÁRIO */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 13px;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.campo input {
+    width: 100%;
+    height: 39px;
+    padding: 0 11px;
+
+    border: 1px solid #eadbd2;
+    border-radius: 7px;
+
+    background-color: white;
+    outline: none;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: #292321;
+}
+
+.campo input::placeholder {
+    color: #b3a9a3;
+}
+
+.campo input:focus {
+    border-color: #e98274;
+    box-shadow: 0 0 0 2px rgba(233, 130, 116, 0.12);
+}
+
+/* CAMPOS LADO A LADO */
+
+.linha {
+    display: flex;
+    gap: 10px;
+}
+
+.cep {
+    flex: 0 0 34%;
+}
+
+.numero {
+    flex: 0 0 34%;
+}
+
+.uf {
+    flex: 0 0 25%;
+}
+
+/* ENDEREÇO */
+
+.separador {
+    border-top: 1px solid #eee3dc;
+    margin: 2px 0 14px;
+}
+
+.formulario h3 {
+    font-size: 11px;
+    margin-bottom: 13px;
+}
+
+/* TERMOS DE USO */
+
+.termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+
+    margin: 5px 0 17px;
+
+    font-size: 11px;
+    line-height: 1.5;
+    color: #827873;
+}
+
+.termos input {
+    margin-top: 1px;
+    accent-color: #e98274;
+}
+
+/* BOTÃO DE CADASTRO */
+
+button {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #ed8274;
+    color: #38251f;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button span {
+    margin-left: 7px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e47365;
+}
+
+/* LINK PARA ENTRAR */
+
+.login {
+    text-align: center;
+    font-size: 12px;
+    color: #827873;
+    margin-top: 18px;
+}
+
+.login a {
+    color: #d86c5d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* AJUSTES PARA TELAS MENORES */
+
+@media (max-width: 800px) {
+
+    .pagina-cadastro {
+        width: 100%;
+        padding: 30px 22px;
+    }
+
+    .formulario {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .pagina-cadastro {
+        padding: 25px 16px;
+    }
+
+    .linha {
+        gap: 8px;
+    }
+
+    .formulario h1 {
+        font-size: 25px;
+    }
+}
